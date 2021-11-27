@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.24.0",
     "concurrently": "^6.4.0",
+    "express": "^4.17.1",
     "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,7 +25,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-  "start": "node test.js",
+    "start": "node test.js",
     "dev": "concurrently \"PORT=3001 react-scripts start\"  \" yarn json-server --watch -p 3333 db.json\"",
     "build": "react-scripts build",
     "test": "react-scripts test",

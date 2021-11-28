@@ -25,7 +25,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "node test.js",
+    "start": "node server.js",
     "dev": "concurrently \"PORT=3001 react-scripts start\"  \" yarn json-server --watch -p 3333 db.json\"",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -11,6 +11,8 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import axios from "axios";
 
+import api from "../../db.json"
+
 SwiperCore.use([Autoplay, EffectFade]);
 
 const TabsContent = () => {
@@ -44,14 +46,14 @@ const TabsContent = () => {
   }, []);
 
   useEffect(() => {
-    getServicesData();
+    console.log("eita", api)
   }, []);
 
   const useStyles = makeStyles(tabsStylesConfig(isMobile))
   const classes = useStyles()
   return (
     <Grid container spacing={3} justifyContent="center" style={{borderBottom: "1px solid #00000033",}}>
-      {!isMobile ? servicesData && servicesData.map((item, idx) => (
+      {!isMobile ? api.services && api.services.map((item, idx) => (
         <Grid item xs={11} sm={11} md={11} lg={3} xl={3}>
           <Paper className={idx !== 1 ? classes.card : classes.secondCard}>
             <img src={cardsContent[idx].icon} width="50px" height="50px" />

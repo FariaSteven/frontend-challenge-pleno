@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Grid, tabClasses } from "@material-ui/core";
+import api from "../../db.json"
 import axios from "axios";
 import firstItem from "../../assets/graphicriver.png";
 import secondItem from "../../assets/themeforest.png";
@@ -28,7 +29,8 @@ const Tabs = () => {
   }, []);
 
   useEffect(() => {
-    getClientsData();
+    // getClientsData();
+
   }, []);
   return (
     <Grid
@@ -39,8 +41,8 @@ const Tabs = () => {
         borderBottom: "1px solid #00000033",
       }}
     >
-      {clientsData &&
-        clientsData.map((items, idx) => (
+      {api.clients &&
+        api.clients.map((items, idx) => (
           <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
             <div
               style={{
@@ -65,7 +67,7 @@ const Tabs = () => {
                   color: tabCLicked !== idx && "#767676",
                 }}
               >
-                {clientsData && clientsData[idx].title}
+                {items.title && items.title}
               </p>
             </div>
           </Grid>

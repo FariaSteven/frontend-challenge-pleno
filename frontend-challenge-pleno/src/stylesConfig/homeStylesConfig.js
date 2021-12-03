@@ -14,7 +14,7 @@ const homeStylesConfig = (wave, isMobile) => {
     },
     logoContainer: {
       display: "flex",
-      fontSize: "35px",
+      fontSize: isMobile ? "25px" : "35px",
       alignItems: "center",
       // marginLeft: "80px",
     },
@@ -59,14 +59,14 @@ const homeStylesConfig = (wave, isMobile) => {
     wave: {
       background: `url(${wave}) repeat-x`,
       position: "absolute",
-      top: isMobile === 1366 ? "480px" : "784px",
+      top: isMobile === 1366 ? "527px" : "835px",
       width: "6400px",
       height: isMobile === 1366 ? "150px" : "198px",
       animation: "$wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite",
       transform: "translate3d(0, 0, 0)",
       "&:last-child": {
         position: "absolute",
-        top: isMobile === 1366 ? "480px" : "784px",
+        top: isMobile === 1366 ? "527px" : "835px",
         width: "6400px",
         height: isMobile === 1366 ? "150px" : "198px",
         animation:

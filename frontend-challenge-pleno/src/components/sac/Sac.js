@@ -11,7 +11,7 @@ const Sac = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    if (window.innerWidth < 1366) {
+    if (window.screen.width < 1366) {
       setIsMobile(true);
     } else {
       setIsMobile(false);

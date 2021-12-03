@@ -9,14 +9,14 @@ const Menu = (props) => {
   const { openMenu, setOpenMenu } = props;
 
   useEffect(() => {
-    if (window.innerWidth < 1080) {
+    if (window.screen.width < 1080) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
   }, []);
 
-  const useStyles = makeStyles(menuStylesConfig(isMobile, window.innerWidth));
+  const useStyles = makeStyles(menuStylesConfig(isMobile, window.screen.width));
   const classes = useStyles();
   return (
     <div>

@@ -20,7 +20,7 @@ const Tabs = () => {
   };
 
   useEffect(() => {
-    if (window.innerWidth < 1366) {
+    if (window.screen.width < 1366) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -61,7 +61,7 @@ const Tabs = () => {
                 style={{
                   fontSize: isMobile ? "20px" : "30px",
                   fontWeight: "700",
-                  fontFamily: "Raleaway",
+                  // fontFamily: "Raleaway",
                   color: tabCLicked !== idx && "#767676",
                 }}
               >
